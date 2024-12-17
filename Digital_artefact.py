@@ -50,16 +50,14 @@ colorized_text = color_name + original_txt[color_start:color_end] + "\033[0m"
 print(f"{original_txt[:color_start]}{colorized_text}{original_txt[color_end:]}")
 old_char = input("Введите символ которую вы хотите заменить\n")
 new_char = input(f"Введите символ на которую вы хотите заменить '{old_char}'\n")
-moded_txt = original_txt.replace(f"{old_char}", f"{new_char}")
+moded_txt = original_txt.replace (old_char, new_char)
 print(f"Заменённый текст :{moded_txt}")
-# even_chars = (2, 4, 6, 8, 10, 12,)
-# odd_chars = (1, 3, 5, 7, 9, 11,)
 time.sleep(1)
-print(f"Чётные символы:{original_txt[0::2]}")
-print(f"Нечётные символы:{original_txt[1::2]}")
+print(f"Чётные символы:{original_txt[1::2]}")
+print(f"Нечётные символы:{original_txt[::2]}")
 time.sleep(1)
 print(original_txt[::-1])
 time.sleep(1)
-mid_index = int(length / 2)
-swapped_txt = original_txt[mid_index: -mid_index]
-print(original_txt[mid_index:], original_txt[:-mid_index])
+mid_index = length // 2
+swapped_txt = original_txt[mid_index:] + original_txt[:-mid_index]
+print(swapped_txt)
