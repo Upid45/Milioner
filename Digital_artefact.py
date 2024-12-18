@@ -1,13 +1,18 @@
 import time
 import string
 
+
+original_txt = input("Введите сообщение: ")
+length = len(original_txt)
+print(length)
+print(original_txt[-3:])
+print(original_txt[:3])
 color_name_black = "\u001b[30m"
 color_name_red = "\u001b[31m"
 color_name_green = "\u001b[32m"
 color_name_yellow = "\u001b[33m"
 color_name_blue = "\u001b[34m"
 color_name_white = "\u001b[37m"
-
 colorized_txt = input("""
                    Select one of the colors from the list
                    Type it exactly as it will be written below:
@@ -39,11 +44,6 @@ elif colorized_txt == "Black":
 else:
     color_name = "\u001b[232m"
 print(f"\u001b[0m")
-original_txt = input("Введите сообщение: ")
-length = len(original_txt)
-print(length)
-print(original_txt[-3:])
-print(original_txt[:3])
 color_start = int(input("Введите число после которого начнётся покраска \n"))
 color_end = int(input("Введите второе число на котором закончится покраста \n"))
 colorized_text = color_name + original_txt[color_start:color_end] + "\033[0m"
