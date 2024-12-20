@@ -26,9 +26,6 @@ for number in range(10):
         print("Enemy item - Rock")
     elif comp == 3:
         print("Enemy item - Scissors")
-    else:
-        print("HOW THIS IS HAPPEND?")
-        sys.exit(0)
     if player == comp:
         print("Draw!")
         print(f"You win {win_points} times")
